@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='contato bg-aqua-active color-palette' >
+      <h2>Entre em contato com a gente</h2>
+      <form method="post" action="{% url 'kpop:home' %}">
+        {% csrf_token%}
+        <label > Email </label>
+        <input type="text" name="email" id='email' required="*" placeholder="email">
+        <label > Assunto </label>
+        <input type="text" name="assunto" id='assunto' required="*" placeholder="assunto">
+        <label > Texto </label>
+        <input type="text" name="texto" id='texto' required="*" placeholder="texto">
+        <input type="submit" name="Enviar">
+      </form>
+      
+    </div>
+{% endblock %}
